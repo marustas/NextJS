@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@supabase/supabase-js": "^2.93.3",
     "@tailwindcss/postcss": "^4.1.18",
     "date-fns": "^4.1.0",
