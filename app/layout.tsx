@@ -1,6 +1,7 @@
 import { PropsWithChildren } from "react";
 import Logo from "./components/Logo";
 import Navigation from "./components/Navigation";
+import "@/app/_styles/globals.css";
 
 export const metadata = {
   title: "The Wild Oasis",

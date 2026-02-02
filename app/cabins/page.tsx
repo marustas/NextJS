@@ -9,7 +9,7 @@ export default async function Page() {
       <h1>Cabins page</h1>
 
       <ul>
-        {data.map((user) => (
+        {data.map((user: any) => (
           <li key={user.id}>{user.name}</li>
         ))}
       </ul>
