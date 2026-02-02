@@ -1,3 +1,4 @@
+import { PropsWithChildren } from "react";
 import Logo from "./components/Logo";
 import Navigation from "./components/Navigation";
 
@@ -5,7 +6,7 @@ export const metadata = {
   title: "The Wild Oasis",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <body>

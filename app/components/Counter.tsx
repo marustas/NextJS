@@ -2,7 +2,11 @@
 
 import { useState } from "react";
 
-export default function Counter({ users }) {
+interface Props {
+  users: Array<unknown>;
+}
+
+export default function Counter({ users }: Props) {
   const [count, setCount] = useState(0);
 
   return (
