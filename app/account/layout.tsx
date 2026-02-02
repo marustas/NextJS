@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import SideNavigation from "../components/SideNavigation";
+import SideNavigation from "../_components/SideNavigation";
 
 export default function AccountLayout({ children }: PropsWithChildren) {
   return (

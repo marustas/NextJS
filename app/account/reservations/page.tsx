@@ -1,4 +1,4 @@
-import ReservationCard from "@/app/components/ReservationCard";
+import ReservationCard from "@/app/_components/ReservationCard";
 
 export const metadata = {
   title: "Reservations",

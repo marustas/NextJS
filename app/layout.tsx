@@ -1,10 +1,10 @@
 import { PropsWithChildren } from "react";
-import Logo from "./components/Logo";
-import Navigation from "./components/Navigation";
+import Logo from "./_components/Logo";
+import Navigation from "./_components/Navigation";
 import "@/app/_styles/globals.css";
 import { Josefin_Sans } from "next/font/google";
 import { Metadata } from "next";
-import Header from "./components/Header";
+import Header from "./_components/Header";
 
 const font = Josefin_Sans({
   subsets: ["latin"],

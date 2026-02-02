@@ -1,4 +1,4 @@
-import SelectCountry from "@/app/components/SelectCountry";
+import SelectCountry from "@/app/_components/SelectCountry";
 
 export const metadata = {
   title: "Guest Profile",
