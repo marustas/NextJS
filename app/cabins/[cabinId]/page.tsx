@@ -1,8 +1,22 @@
 import { getCabin } from "@/app/_lib/data-service";
 import { EyeSlashIcon, MapPinIcon, UsersIcon } from "@heroicons/react/24/solid";
+import { Metadata } from "next";
+import Image from "next/image";
 
 interface Params {
   cabinId: string;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Params;
+}): Promise<Metadata> {
+  const cabin = await getCabin(params.cabinId);
+
+  return {
+    title: `Cabin ${cabin.name}`,
+  };
 }
 
 export default async function Page({ params }: { params: Params }) {
@@ -14,8 +28,13 @@ export default async function Page({ params }: { params: Params }) {
   return (
     <div className="max-w-6xl mx-auto mt-8">
       <div className="grid grid-cols-[3fr_4fr] gap-20 border border-primary-800 py-3 px-10 mb-24">
-        <div className="relative scale-[1.15] -translate-x-3">
-          <img src={image} alt={`Cabin ${name}`} />
+        <div className="relative scale-[1.15] -translate-x-3 ">
+          <Image
+            src={image}
+            alt={`Cabin ${name}`}
+            className="object-cover"
+            fill
+          />
         </div>
 
         <div>
