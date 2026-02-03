@@ -1,5 +1,7 @@
 // Let's imagine your colleague already built this component 😃
 
+import { getCountries } from "../_lib/data-service";
+
 interface Props {
   defaultCountry: string;
   name: string;
@@ -10,7 +12,8 @@ interface Props {
 async function SelectCountry({ defaultCountry, name, id, className }: Props) {
   const countries = await getCountries();
   const flag =
-    countries.find((country) => country.name === defaultCountry)?.flag ?? "";
+    countries.find((country: any) => country.name === defaultCountry)?.flag ??
+    "";
 
   return (
     <select
@@ -21,7 +24,7 @@ async function SelectCountry({ defaultCountry, name, id, className }: Props) {
       className={className}
     >
       <option value="">Select country...</option>
-      {countries.map((c) => (
+      {countries.map((c: any) => (
         <option key={c.name} value={`${c.name}%${c.flag}`}>
           {c.name}
         </option>
