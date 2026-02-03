@@ -1,7 +1,10 @@
+import { Reservation } from "@/app/_components/Reservation";
+import SpinnerMini from "@/app/_components/SpinnerMini";
 import { getCabin } from "@/app/_lib/data-service";
 import { EyeSlashIcon, MapPinIcon, UsersIcon } from "@heroicons/react/24/solid";
 import { Metadata } from "next";
 import Image from "next/image";
+import { Suspense } from "react";
 
 interface Params {
   cabinId: string;
@@ -70,9 +73,12 @@ export default async function Page({ params }: { params: Params }) {
       </div>
 
       <div>
-        <h2 className="text-5xl font-semibold text-center">
+        <h2 className="text-5xl font-semibold text-center text-accent-400">
           Reserve today. Pay on arrival.
         </h2>
+        <Suspense fallback={<SpinnerMini />}>
+          <Reservation cabin={cabin} />
+        </Suspense>
       </div>
     </div>
   );
